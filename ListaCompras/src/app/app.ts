@@ -28,4 +28,7 @@ export class App {
   riscarItem(itemlista: ItemLista) {
     itemlista.comprado = !itemlista.comprado; // Alterna o estado de comprado (true/false)
   }
+  limparLista() {
+    this.lista = []; // Limpa a lista de compras
+  }
 }
