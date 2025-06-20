@@ -11,13 +11,49 @@
                             <mat-label>Nome: *</mat-label>
                             <input type="text" placeholder="Henrique Kriguer" matInput>
                        </mat-form-field>
-
                     </div>
-
+                    <div fxLayout="row" flLayout="start" fxLayoutGap="16px" >
+                        <mat-form-field class="full-width">
+                            <mat-label>CPF: *</mat-label>
+                            <input type="text" placeholder="000.000.000-00" matInput>
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <mat-label>Data de Nascimento: *</mat-label>
+                            <input type="date" matInput>
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <mat-label>Telefone: *</mat-label>
+                            <input type="text" placeholder="(00) 00000-0000" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" flLayout="start" fxLayoutGap="" >
+                        <mat-form-field class="full-width">
+                            <mat-label>Email: *</mat-label>
+                            <input type="email" placeholder="seuEmail@email.com" matInput>
+                        </mat-form-field>
+                    </div>
                 </mat-card-content>
+                <mat-card-actions>
+
+                               <button mat-flat-button color="primary">
+                                    <mat-icon fontIcon="save"> 
+                                    </mat-icon>
+                                        Salvar
+                                </button> 
+                                <button mat-flat-button color="primary" class="ml-5">
+                                    <mat-icon fontIcon="refresh"> 
+                                    </mat-icon>
+                                        atualizar
+                                </button>
+                                <button mat-flat-button color="warn" class="ml-5">
+                                    <mat-icon fontIcon="backspace"> 
+                                    </mat-icon>
+                                        limpar
+                                </button> 
+
+                </mat-card-actions>
             </mat-card>
         </form>
-
     </div>
 </div>
 
