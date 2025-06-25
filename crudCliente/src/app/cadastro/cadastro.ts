@@ -13,6 +13,8 @@ import { RouterLink } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
 import { MatLabel } from '@angular/material/form-field';
 import { Cliente } from './cliente';
+import { Customer } from '../customer'; 
+
 @Component({
   selector: 'app-cadastro',
   imports: [
@@ -36,7 +38,11 @@ export class Cadastro {
 
   cliente: Cliente = Cliente.newCliente()
 
+  constructor( private service: Customer ) {
+
+  }
+
   salvar() {
-    console.log('Dados Cliente: ', this.cliente);
+    this.service.salvar(this.cliente);
   }
 }
