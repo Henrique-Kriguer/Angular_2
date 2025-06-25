@@ -29,4 +29,9 @@ import { Cliente } from './cliente';
 export class Cadastro {
 
   cliente: Cliente = Cliente.newCliente();
+
+  salvar() {
+    console.log('Cliente salvo:', this.cliente);
+    // Aqui você pode adicionar lógica para salvar o cliente, como enviar para um serviço ou API
+  }
 }
