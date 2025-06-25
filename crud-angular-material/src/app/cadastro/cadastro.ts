@@ -6,6 +6,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from "@angular/material/icon"; 
 import { MatButtonModule } from '@angular/material/button';
+import { RouterOutlet } from '@angular/router';
+import { MatIcon } from '@angular/material/icon';
 import { Cliente } from './cliente';
 
 @Component({
@@ -17,7 +19,9 @@ import { Cliente } from './cliente';
     MatInputModule,
     FormsModule,
     MatIconModule,
-    MatButtonModule    
+    MatButtonModule,
+    RouterOutlet,
+    MatIcon    
   ],
   templateUrl: './cadastro.html',
   styleUrl: './cadastro.scss'
