@@ -9,6 +9,7 @@ export class Customer {
   static REPO_CLIENTES = "_CLIENTES";
   
   constructor() { }
+
     salvar(cliente: Cliente) {
       const storage = this.obterStorage();
       storage.push(cliente);
@@ -21,9 +22,8 @@ export class Customer {
         const clientes: Cliente[] = JSON.parse(clientesString);
         return clientes;
       }
-
       const clientes: Cliente[] = [];
       localStorage.setItem(Customer.REPO_CLIENTES, JSON.stringify(clientes));
-      return clientes;    }
-  
+      return clientes;
+      }
 }
