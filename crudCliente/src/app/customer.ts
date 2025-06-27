@@ -16,7 +16,12 @@ export class Customer {
       localStorage.setItem(Customer.REPO_CLIENTES, JSON.stringify(storage));
     }
 
-    obterStorage() : Cliente[] {
+    pesquisarClientes(nome: String) : Cliente[]{
+      return this.obterStorage();
+
+    }
+
+    private obterStorage() : Cliente[] {
       const clientesString = localStorage.getItem(Customer.REPO_CLIENTES);
       if (clientesString) {
         const clientes: Cliente[] = JSON.parse(clientesString);
@@ -25,5 +30,5 @@ export class Customer {
       const clientes: Cliente[] = [];
       localStorage.setItem(Customer.REPO_CLIENTES, JSON.stringify(clientes));
       return clientes;
-      }
+    }
 }
