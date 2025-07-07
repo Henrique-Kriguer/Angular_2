@@ -36,4 +36,5 @@ export class Customer {
       localStorage.setItem(Customer.REPO_CLIENTES, JSON.stringify(clientes));
       return clientes;
     }
+    
 }
