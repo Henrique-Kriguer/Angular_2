@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 
 import { RouterLink } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
@@ -41,7 +41,9 @@ export class Cadastro implements OnInit {
 
   constructor( 
     private service: Customer,
-    private route: ActivatedRoute  ) {
+    private route: ActivatedRoute,
+    private router: Router   
+  ) {
 
   }
 
@@ -59,7 +61,13 @@ export class Cadastro implements OnInit {
     })
   }
   salvar() {
-    this.service.salvar(this.cliente);
-    this.cliente = Cliente.newCliente();
+    if(!this.atualizando){
+      this.service.salvar(this.cliente);
+      this.cliente = Cliente.newCliente();
+    } else {
+      this.service.atualizar(this.cliente);
+      this.router.navigate(['/consulta'])
+    }
+    
   }
 }

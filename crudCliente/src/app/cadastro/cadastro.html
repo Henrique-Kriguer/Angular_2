@@ -41,27 +41,41 @@
                                         name="email" placeholder="seuEmail@email.com" matInput>
                         </mat-form-field>
                     </div>
+                    <div>
+                         <div fxLayout="row" flLayout="start" fxLayoutGap="" >
+                            <mat-form-field class="full-width">
+                                <mat-label>ID: *</mat-label>
+                                <input type="id" [(ngModel)]="cliente.id"
+                                            name="id" matInput readonly>
+                            </mat-form-field>
+                        </div>
+                    </div>
                 </mat-card-content>
                 <mat-card-actions>
-                    <div fxLayout.gt-lg="row">
-                        <div fxLayout.gt-lg="column">
+                    @if(!atualizando){
+                        <div fxLayout.gt-lg="row">
+                            <div fxLayout.gt-lg="column">
                                 <button mat-flat-button color="primary" class="ml-10" type="submit">
                                     <mat-icon fontIcon="save"> 
                                     </mat-icon>
                                         Salvar
                                 </button> 
+                            </div>
                         </div>
-                    </div>
-                               <button mat-flat-button color="primary" class="ml-5">
+
+                    } @else {
+                         <button mat-flat-button color="primary" class="ml-5">
                                     <mat-icon fontIcon="refresh"> 
                                     </mat-icon>
                                         atualizar
-                                </button>
-                                <button mat-flat-button color="warn" class="ml-5">
+                        </button>
+
+                    }
+                    <button mat-flat-button color="warn" class="ml-5">
                                     <mat-icon fontIcon="backspace"> 
                                     </mat-icon>
                                         limpar
-                                </button> 
+                    </button> 
                 </mat-card-actions>
             </mat-card>
         </form>

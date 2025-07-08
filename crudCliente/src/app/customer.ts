@@ -17,7 +17,6 @@ export class Customer {
     }
 
     pesquisarClientes(nomeBusca: string) : Cliente[]{
-
       const clientes = this.obterStorage();
       if(!nomeBusca){
         return clientes;
@@ -30,7 +29,25 @@ export class Customer {
       const clientes = this.obterStorage();
       return clientes.find(cliente => cliente.id === id)
     }
-    
+
+    atualizar(cliente: Cliente){
+      const storage = this.obterStorage();
+      storage.forEach(customerStorage => {
+        if(customerStorage.id === cliente.id){
+          Object.assign(customerStorage, cliente);
+        }
+      })
+      localStorage.setItem(Customer.REPO_CLIENTES, JSON.stringify(storage));
+    }
+
+    deletar(cliente: Cliente){
+      const storage = this.obterStorage();
+
+      const novaLista = storage.filter( clienteStorage => clienteStorage.id !== cliente.id)
+
+      localStorage.setItem(Customer.REPO_CLIENTES, JSON.stringify(novaLista));
+    }
+
     private obterStorage() : Cliente[] {
       const clientesString = localStorage.getItem(Customer.REPO_CLIENTES);
       if (clientesString) {
