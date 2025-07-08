@@ -32,7 +32,7 @@ export class Consulta implements OnInit {
 
   nomeBusca: string = "";
   listaClientes: Cliente[] = [];
-  colunasTable: string[] = ['id','cpf','dataNascimento','nome', 'telefone', 'email', 'acoes'];
+  colunasTable: string[] = ['cpf','dataNascimento','nome', 'telefone', 'email', 'acoes'];
 
   constructor(
     private service: Customer,

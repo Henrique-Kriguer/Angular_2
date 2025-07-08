@@ -26,6 +26,11 @@ export class Customer {
 
     }
 
+    buscarClientePorId(id: string) : Cliente | undefined {
+      const clientes = this.obterStorage();
+      return clientes.find(cliente => cliente.id === id)
+    }
+    
     private obterStorage() : Cliente[] {
       const clientesString = localStorage.getItem(Customer.REPO_CLIENTES);
       if (clientesString) {
