@@ -14,6 +14,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatLabel } from '@angular/material/form-field';
 import { Cliente } from './cliente';
 import { Customer } from '../customer'; 
+import { NgxMaskDirective, provideNgxMask} from 'ngx-mask'
 
 @Component({
   selector: 'app-cadastro',
@@ -30,7 +31,9 @@ import { Customer } from '../customer';
             RouterOutlet,
             RouterLink,
             MatIcon,
+            NgxMaskDirective
   ],
+  providers: [ provideNgxMask()],
   templateUrl: './cadastro.html',
   styleUrl: './cadastro.scss'
 })

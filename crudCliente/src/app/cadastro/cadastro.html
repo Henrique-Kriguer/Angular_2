@@ -21,24 +21,31 @@
                         <mat-form-field class="full-width">
                             <mat-label>CPF: *</mat-label>
                             <input type="text"[(ngModel)]="cliente.cpf"
-                                        name="cpf" placeholder="000.000.000-00" matInput>
+                                        name="cpf" 
+                                        mask="000.000.000-00"
+                                        placeholder="000.000.000-00" matInput>
                         </mat-form-field>
                         <mat-form-field class="full-width">
                             <mat-label>Data de Nascimento: *</mat-label>
                             <input type="text" [(ngModel)]="cliente.dataNascimento"
-                                        name="dataNascimento" matInput>
+                                        name="dataNascimento"
+                                        mask="00/00/0000"
+                                        matInput>
                         </mat-form-field>
                         <mat-form-field class="full-width">
                             <mat-label>Telefone: *</mat-label>
                             <input type="text" [(ngModel)]="cliente.telefone"
-                                        name="telefone" placeholder="(00) 00000-0000" matInput>
+                                        name="telefone" 
+                                        mask="(00)0000-0000"
+                                        placeholder="(00) 00000-0000" matInput>
                         </mat-form-field>
                     </div>
                     <div fxLayout="row" flLayout="start" fxLayoutGap="" >
                         <mat-form-field class="full-width">
                             <mat-label>Email: *</mat-label>
                             <input type="email" [(ngModel)]="cliente.email"
-                                        name="email" placeholder="seuEmail@email.com" matInput>
+                                        name="email" 
+                                        placeholder="seuEmail@email.com" matInput>
                         </mat-form-field>
                     </div>
                     <div>
