@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { Customer } from '../customer';
 import { Cliente } from '../cadastro/cliente';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -33,6 +34,7 @@ export class Consulta implements OnInit {
   nomeBusca: string = "";
   listaClientes: Cliente[] = [];
   colunasTable: string[] = ['cpf','dataNascimento','nome', 'telefone', 'email', 'acoes'];
+  snack: MatSnackBar = inject(MatSnackBar)
 
   constructor(
     private service: Customer,
@@ -61,6 +63,11 @@ export class Consulta implements OnInit {
   deletar(cliente:Cliente){
     this.service.deletar(cliente);
     this.listaClientes = this.service.pesquisarClientes('');
+    this.mostrarMensagem("Registro deletado com sucesso!")
+  }
+
+  mostrarMensagem (mensagem:string){
+    this.snack.open(mensagem,"ok")
   }
 }
 
