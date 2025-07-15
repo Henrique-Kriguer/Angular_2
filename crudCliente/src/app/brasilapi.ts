@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Estado } from './brasilapiModels';
 import {Municipio} from './brasilapiModels';
+import { Cep } from './brasilapiModels'
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class Brasilapi {
   }
   listarMunicipios(uf: string) : Observable<Municipio[]>{
     const path = '/ibge/municipios/v1/' + uf
-    return this.http.get<Municipio[]>(this.baseURL+path)
+    return this.http.get<Municipio[]>(this.baseURL + path)
+  }
+  listarCep(cep: string) : Observable<Cep[]>{
+    const path = '/cep/v1/' + cep
+      return (this.http.get<Cep[]>(this.baseURL + path))
   }
 }

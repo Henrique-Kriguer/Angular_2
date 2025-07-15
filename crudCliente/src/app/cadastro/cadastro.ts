@@ -18,6 +18,7 @@ import { NgxMaskDirective, provideNgxMask} from 'ngx-mask';
 import { Estado} from '../brasilapiModels';
 import { Municipio } from '../brasilapiModels';
 import { Brasilapi } from '../brasilapi';
+import { Cep } from '../brasilapiModels';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-cadastro',
@@ -47,6 +48,8 @@ export class Cadastro implements OnInit {
   snack: MatSnackBar = inject(MatSnackBar);
   estados: Estado[] = [];
   municipios: Municipio[] = [];
+  cep: Cep[] = [];
+  logradouro: string = '';
 
 
   constructor( 
@@ -67,6 +70,16 @@ export class Cadastro implements OnInit {
         if(clienteEncontrado){
           this.atualizando = true;
           this.cliente = clienteEncontrado;
+          if(this.cliente.uf){
+            const event = { value: this.cliente.uf};
+            this.carregarMunicipios(event as MatSelectChange) // converte o tipo da variável const como MatSelectChange
+            
+          }
+          if(this.cliente.cep){
+            const event = { value: this.cliente.cep};
+            this.carregarLogradouro(event as MatSelectChange)
+            
+          }
         }
       }
     })
@@ -84,6 +97,15 @@ export class Cadastro implements OnInit {
       next: listaMunicipios => this.municipios = listaMunicipios,
       error: erro => console.log("ocorreu um erro: ", erro)
     })
+  }
+  carregarLogradouro(event: MatSelectChange){
+    const cep = event.value;
+    this.Brasilapi.listarCep(cep).subscribe({
+      next: logradouro => cep.street,
+      error: erro => console.log("ocorreu u erro: " , erro)
+    })
+
+    
   }
 
   salvar() {

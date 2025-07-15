@@ -58,27 +58,47 @@
                         </div>
                     </div>
                         <div fxLayout="row" flLayout="start" fxLayoutGap="16px">
-                            <div fxLayout="column" fxFlex="100px">
+                            <div fxLayout="column" fxFlex="120px">
                                 <mat-form-field class="full-width">
                                     <mat-label> UF: *</mat-label>
-                                    <mat-select (selectionChange)="carregarMunicipios($event)">
+                                    <mat-select [(value)]="cliente.uf" (selectionChange)="carregarMunicipios($event)">
                                         <mat-option *ngFor="let uf of estados" [value]="uf.sigla">
                                             {{ uf.sigla }}
                                         </mat-option>
                                     </mat-select>
                                 </mat-form-field>
                             </div>
-                            <div fxLayout="column" fxFlex="850px" >
+                            <div fxLayout="column" fxFlex="830px" >
                                 <mat-form-field class="full-width">
                                     <mat-label> Municipio</mat-label>
-                                    <mat-select>
+                                    <mat-select [(value)]="cliente.municipio">
                                         <mat-option *ngFor="let m of municipios" [value]="m.nome">
                                             {{ m.nome }}
                                         </mat-option>
                                     </mat-select>
-                                </mat-form-field>>
-
+                                </mat-form-field>
                             </div>
+                        </div>
+                        <div fxLayout ="row" flLayout="start" fxLayoutGap="16px">
+                            <div fxLayout="column" fxFlex="120px">
+                                <mat-form-field>
+                                    <mat-label>CEP: </mat-label>
+                                <input type="text" [(ngModel)]="cliente.cep"
+                                        name="cep"
+                                        mask="00000-000"
+                                        matInput>
+                                </mat-form-field>
+                            </div>
+                            <div fxLayout="column" fxFlex="830px">
+                                <mat-form-field>
+                                    <mat-label>Logradouro:</mat-label>
+                                   
+                                    <input type="text" [(ngModel)]="cliente.logradouro" 
+                                        name="logradouro"
+                                        placeholder="Rua, Avenida, Travessa, etc."
+                                        matInput>
+                                </mat-form-field>
+                            </div>    
                             
                         </div>
                     

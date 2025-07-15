@@ -7,6 +7,13 @@ export class Cliente {
     dataNascimento?: string;
     telefone?: string;
     email?: string;
+    uf?: string;
+    municipio?: string;
+    cep?: string;
+    bairro?: string;
+    logradouro?: string;
+    numero?: string;
+    complemento?: string;
     deletando:boolean = false;
 
     static newCliente(){
