@@ -83,7 +83,7 @@
                             <div fxLayout="column" fxFlex="120px">
                                 <mat-form-field>
                                     <mat-label>CEP: </mat-label>
-                                <input type="text" [(ngModel)]="cliente.cep"
+                                <input type="text" [value]="cliente.cep"
                                         name="cep"
                                         mask="00000-000"
                                         matInput>
@@ -93,10 +93,13 @@
                                 <mat-form-field>
                                     <mat-label>Logradouro:</mat-label>
                                    
-                                    <input type="text" [(ngModel)]="cliente.logradouro" 
+                                    <input type="text" [value]="cliente.logradouro" 
                                         name="logradouro"
                                         placeholder="Rua, Avenida, Travessa, etc."
                                         matInput>
+                                        <mat-option *ngFor="let l of cep" [value] = "l.street">
+                                            {{ l.street }}
+                                        </mat-option>
                                 </mat-form-field>
                             </div>    
                             
