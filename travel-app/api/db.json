@@ -1,0 +1,24 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Restaurantes",
+      "descricao": "Lugares para alimentação"
+    },
+    {
+      "id": "3",
+      "nome": "Bares",
+      "descricao": "Lugares para beber"
+    },
+    {
+      "id": "2",
+      "nome": "Cafeterias",
+      "descricao": "Lugares para tomar café especial e conversar"
+    },
+    {
+      "id": "a6dd",
+      "nome": "Lanchonete",
+      "descricao": "Lugares para comer lanche"
+    }
+  ]
+}
