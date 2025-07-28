@@ -19,6 +19,16 @@
       "id": "a6dd",
       "nome": "Lanchonete",
       "descricao": "Lugares para comer lanche"
+    },
+    {
+      "id": "fb7f",
+      "nome": "praias",
+      "descricao": "Lugares para relaxar com a família"
+    },
+    {
+      "id": "fbe7",
+      "nome": "teste",
+      "descricao": "teste"
     }
   ]
 }
