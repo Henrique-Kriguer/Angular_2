@@ -23,24 +23,35 @@ export class Lugar implements OnInit{
       localizacao: new FormControl('', Validators.required),
       urlFoto: new FormControl('', Validators.required),
       avaliacao: new FormControl('', Validators.required)
-    });
-  }
+      });
+    }
 
   ngOnInit(): void {
     
-    this.categoriaService.obterTodas().subscribe({
-      next: (listaCategorias) => {
-        this.categorias = listaCategorias
-      }
-    })
+      this.categoriaService.obterTodas().subscribe({
+        next: (listaCategorias) => {
+          this.categorias = listaCategorias
+        }
+      })
+    
   }
   salvar(){
-    this.service.salvar(this.camposForm.value)
-      .subscribe({
-        next: (lugar) => {console.log('Cadastrado com sucesso!', lugar),
-                          this.camposForm.reset();
-        },
-        error: (error) => console.error('ocorreu um erro!', error)
-      });
+
+    this.camposForm.markAllAsTouched();
+
+    if(this.camposForm.valid){
+           this.service.salvar(this.camposForm.value)
+          .subscribe({
+            next: (lugar) => {console.log('Cadastrado com sucesso!', lugar),
+                              this.camposForm.reset();
+            },
+            error: (error) => console.error('ocorreu um erro!', error)
+          });
+    }
+  }
+
+  isCampoInvalido(nomeCampo: string) : boolean{
+    const campo = this.camposForm.get(nomeCampo)
+    return (campo?.invalid && campo.touched && campo.errors?.['required']) || false;
   }
 }

@@ -55,6 +55,22 @@
       "localizacao": "São Paulo / SP",
       "urlFoto": "foto 4",
       "avaliacao": "5"
+    },
+    {
+      "id": "96bb",
+      "nome": "bar do Zé",
+      "categoria": "Bares",
+      "localizacao": "Guaratinguetá / SP",
+      "urlFoto": "teste",
+      "avaliacao": "3"
+    },
+    {
+      "id": "17a5",
+      "nome": "Praia do Sonho",
+      "categoria": "praias",
+      "localizacao": "Salvador / BA",
+      "urlFoto": "não tém",
+      "avaliacao": "4"
     }
   ]
 }
