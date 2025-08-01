@@ -30,5 +30,31 @@
       "nome": "teste",
       "descricao": "teste"
     }
+  ],
+  "lugares": [
+    {
+      "id": "1b2d",
+      "nome": "Praia de Itamambuca",
+      "categoria": "praias",
+      "localizacao": "U",
+      "urlFoto": "",
+      "avaliacao": ""
+    },
+    {
+      "id": "8272",
+      "nome": "Baião de 2",
+      "categoria": "Restaurantes",
+      "localizacao": "Ubatuba / SP",
+      "urlFoto": "foto3",
+      "avaliacao": "4"
+    },
+    {
+      "id": "3a98",
+      "nome": "Café da si",
+      "categoria": "Cafeterias",
+      "localizacao": "São Paulo / SP",
+      "urlFoto": "foto 4",
+      "avaliacao": "5"
+    }
   ]
 }
