@@ -1,10 +1,10 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Layout } from './layout/layout';
 
 const routes: Routes = [
   {
-    path: 'paginas',
+    path: '',
     component: Layout,
     children: [
       {
@@ -24,7 +24,7 @@ const routes: Routes = [
         path: 'galeria',
         loadChildren: () => import('../galeria/galeria-module').then(m => m.GaleriaModule),
         pathMatch: 'full',
-        data : { titulo: 'Lsita de lugares legais', subTitulo: 'Descubra os melhores lugar para explorar na cidade.'}
+        data : { titulo: 'Lista de lugares legais', subTitulo: 'Descubra os melhores lugar para explorar na cidade.'}
 
       }
     ]
