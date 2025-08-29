@@ -53,7 +53,6 @@
       "urlFoto": "https://accetur.com.br/wp-content/uploads/2017/08/Santuario-Nacional-Nossa-Senhora-Aparecida-1.jpg",
       "avaliacao": "2"
     },
-    
     {
       "id": "cade",
       "nome": "Igreja N. Sra. Consolata",
@@ -93,6 +92,14 @@
       "localizacao": "Rio de Janeiro / RJ",
       "urlFoto": "https://th.bing.com/th/id/OIP.pZkbY2yBF6H0Gotq3A_X_wHaEE?w=337&h=185&c=7&r=0&o=7&pid=1.7&rm=3",
       "avaliacao": "3"
+    },
+    {
+      "nome": "Basílica Nossa Senhora do Rosário - Casa Thabor",
+      "categoria": "Igrejas",
+      "localizacao": "Rua Avaí, 430 – Parque Santa Inês – Caieiras – SP",
+      "urlFoto": "https://www.google.com/maps/place/Bas%C3%ADlica+de+Nossa+Senhora+do+Ros%C3%A1rio+-+Arautos+do+Evangelho/@-23.4092123,-46.6708202,3a,86.1y,90t/data=!3m8!1e2!3m6!1sAF1QipMz7bl4Cl1qKFnaO9o3RBccYxiHXraIOXVKdaV2!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipMz7bl4Cl1qKFnaO9o3RBccYxiHXraIOXVKdaV2%3Dw90-h86-k-no!7i875!8i832!4m17!1m9!3m8!1s0x94cefa8060bd9191:0x300da51fc336d3a5!2sR.+Ava%C3%AD,+430+-+Santa+In%C3%AAs,+Caieiras+-+SP,+07700-000!3b1!8m2!3d-23.4077136!4d-46.6726959!10e5!16s%2Fg%2F11fz_gzsd8!3m6!1s0x94cef0803cb5569d:0xafb3e04e43f45873!8m2!3d-23.4093026!4d-46.6711507!10e5!16s%2Fg%2F112yggjmn?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D#",
+      "avaliacao": "4",
+      "id": "JiU5X0Z"
     }
   ]
 }
